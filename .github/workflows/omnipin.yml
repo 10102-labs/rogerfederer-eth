@@ -5,6 +5,10 @@ on:
     branches: [main]
   workflow_dispatch: {}
 
+# Minimum permissions — workflow only needs to read the repo, never write back.
+permissions:
+  contents: read
+
 jobs:
   deploy:
     # Skip if OMNIPIN_ENS variable isn't set (e.g. on a fresh fork before configuration)
@@ -15,8 +19,10 @@ jobs:
 
       - uses: oven-sh/setup-bun@v2
 
+      # Pinned version (not @latest) — supply-chain protection.
+      # Bump deliberately after reviewing the diff.
       - name: Install Omnipin
-        run: bun i -g omnipin@latest
+        run: bun i -g omnipin@3.0.0
 
       - name: Deploy to IPFS and update ENS contenthash
         run: |
