@@ -1,0 +1,20 @@
+{
+  "name": "rogerfederer-eth",
+  "version": "1.0.0",
+  "description": "Roger Federer: The Disruptor - A decentralized memorial website",
+  "scripts": {
+    "serve": "python3 -m http.server 8000",
+    "deploy:fleek": "echo 'Deploy via Fleek.co dashboard'",
+    "deploy:pinata": "echo 'Upload via Pinata.cloud dashboard'"
+  },
+  "keywords": [
+    "ipfs",
+    "ens",
+    "federer",
+    "tennis",
+    "decentralized"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {}
+}

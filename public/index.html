@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roger Federer | The Disruptor</title>
+    <meta name="description" content="Exploring how Roger Federer disrupted tennis like Bitcoin disrupted finance - a study in transcendence and paradigm shifts.">
+    
+    <!-- Tennis Ball Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23BFFF00%22 stroke=%22%23ffffff%22 stroke-width=%223%22/><path d=%22M15,50 Q50,20 85,50%22 stroke=%22%23ffffff%22 stroke-width=%222%22 fill=%22none%22/><path d=%22M15,50 Q50,80 85,50%22 stroke=%22%23ffffff%22 stroke-width=%222%22 fill=%22none%22/></svg>" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #f8f9fa;
+            background:
+              radial-gradient(circle at 20% 0%, rgba(212, 175, 55, 0.04) 0%, transparent 45%),
+              radial-gradient(circle at 80% 100%, rgba(165, 28, 48, 0.05) 0%, transparent 50%),
+              linear-gradient(135deg, #0a0d14 0%, #131a26 30%, #1a141e 65%, #100b15 100%);
+            min-height: 100vh;
+            background-attachment: fixed;
+        }
+
+        /* Subtle grain texture for depth */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.025;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.85' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Swiss-Inspired Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 0 80px;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        .hero-title {
+            font-size: clamp(3.5rem, 8vw, 8rem);
+            font-weight: 100;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #d4af37 0%, #ffffff 50%, #a51c30 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+            line-height: 0.9;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.9);
+            letter-spacing: 0.05em;
+        }
+        
+        /* Elegant Text Navigation */
+        .hero-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin: 50px 0 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-nav-link {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 6px;
+            position: relative;
+        }
+        
+        .hero-nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1px;
+            background: #d4af37;
+            transition: width 0.3s ease;
+        }
+        
+        .hero-nav-link:hover {
+            color: #d4af37;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        
+        .hero-nav-link:hover::before {
+            width: 100%;
+        }
+        
+        .hero-nav-separator {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.7rem;
+            font-weight: 300;
+        }
+        
+        /* Swiss Precision Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin: 80px 0;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 50px 30px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #d4af37, #a51c30, #d4af37);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+        
+        .stat-number {
+            font-size: clamp(2.8rem, 6vw, 4rem);
+            font-weight: 100;
+            color: #d4af37;
+            display: block;
+            margin-bottom: 16px;
+            font-variant-numeric: tabular-nums;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+        
+        .section {
+            margin: 120px 0;
+            scroll-margin-top: 100px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #d4af37, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 200;
+            letter-spacing: -0.01em;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            font-style: italic;
+            opacity: 0.75;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+            line-height: 1.6;
+            color: rgba(212, 175, 55, 0.9);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.03) 0%, rgba(255, 255, 255, 0.02) 100%);
+            padding: 20px 30px;
+            border-radius: 12px;
+            border-left: 3px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        /* Refined Comparison Grid */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 60px;
+            margin: 80px 0;
+        }
+        
+        .comparison-card {
+            padding: 50px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-radius: 24px;
+            border-left: 3px solid #d4af37;
+            backdrop-filter: blur(20px);
+            transition: all 0.4s ease;
+        }
+        
+        .comparison-card.federer {
+            border-left-color: #a51c30;
+        }
+        
+        .comparison-card:hover {
+            transform: translateY(-6px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.08) 100%);
+        }
+        
+        .comparison-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-weight: 300;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        
+        .comparison-list {
+            list-style: none;
+        }
+        
+        .comparison-list li {
+            padding: 14px 0;
+            position: relative;
+            padding-left: 30px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+        
+        .comparison-list li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+            font-weight: 300;
+        }
+        
+        .federer .comparison-list li::before {
+            color: #a51c30;
+        }
+        
+        /* Rolex-Inspired Timeline */
+        .era-timeline {
+            margin: 80px 0;
+        }
+        
+        .era-card {
+            margin: 50px 0;
+            padding: 50px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.03) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border-radius: 20px;
+            border-left: 3px solid #d4af37;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .era-card::before {
+            content: '';
+            position: absolute;
+            left: -3px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #d4af37 0%, #a51c30 100%);
+            transition: all 0.4s ease;
+        }
+        
+        .era-card:hover::before {
+            width: 6px;
+        }
+        
+        .era-card:hover {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(255, 255, 255, 0.04) 100%);
+            transform: translateX(12px);
+        }
+        
+        .era-title {
+            color: #d4af37;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        
+        .era-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        /* Uniqlo-Inspired Speech Section */
+        .speech-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.04) 0%, rgba(165, 28, 48, 0.04) 100%);
+            border-radius: 28px;
+            padding: 80px 60px;
+            margin: 100px 0;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            backdrop-filter: blur(25px);
+        }
+        
+        .speech-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .speech-intro h3 {
+            font-size: 2.4rem;
+            color: #d4af37;
+            margin-bottom: 25px;
+            font-weight: 200;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        
+        .speech-intro p {
+            font-size: 1.15rem;
+            opacity: 0.85;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+        
+        .speech-highlights {
+            display: grid;
+            gap: 40px;
+            margin: 60px 0;
+        }
+        
+        .highlight-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.06) 100%);
+            padding: 40px;
+            border-radius: 20px;
+            border-left: 3px solid #d4af37;
+            transition: all 0.3s ease;
+        }
+        
+        .highlight-card:hover {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.09) 100%);
+            transform: translateY(-4px);
+        }
+        
+        .highlight-title {
+            color: #d4af37;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            font-weight: 300;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        
+        .highlight-content p {
+            margin-bottom: 18px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            font-weight: 300;
+        }
+        
+        .highlight-content em {
+            font-style: italic;
+            opacity: 0.85;
+            display: block;
+            margin-top: 15px;
+            padding: 20px;
+            background: rgba(212, 175, 55, 0.08);
+            border-radius: 12px;
+            border-left: 3px solid #d4af37;
+            font-weight: 300;
+        }
+        
+        .article-links {
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            padding: 18px 32px;
+            background: linear-gradient(135deg, #d4af37, #b8941f);
+            color: #000;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.4s ease;
+            font-weight: 500;
+            font-size: 1rem;
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.25);
+            letter-spacing: 0.02em;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(212, 175, 55, 0.35);
+            text-decoration: none;
+            color: #000;
+        }
+        
+        .cta-button.archive {
+            background: linear-gradient(135deg, #a51c30, #a01829);
+            color: #fff;
+            box-shadow: 0 8px 24px rgba(165, 28, 48, 0.25);
+        }
+        
+        .cta-button.archive:hover {
+            box-shadow: 0 16px 40px rgba(165, 28, 48, 0.35);
+            color: #fff;
+        }
+        
+        /* Wilson-Inspired Records Grid */
+        .records-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin: 80px 0;
+        }
+        
+        .record-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(212, 175, 55, 0.03) 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            transition: all 0.4s ease;
+        }
+        
+        .record-card:hover {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(212, 175, 55, 0.06) 100%);
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        
+        .record-number {
+            font-size: 3.5rem;
+            font-weight: 100;
+            color: #d4af37;
+            display: block;
+            margin-bottom: 20px;
+            font-variant-numeric: tabular-nums;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        
+        .record-description {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            font-weight: 300;
+            margin-bottom: 8px;
+        }
+        
+        .record-note {
+            font-size: 0.85rem;
+            opacity: 0.6;
+            margin-top: 10px;
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        /* Swiss Quote Block */
+        .quote-block {
+            font-style: italic;
+            font-size: 1.4rem;
+            text-align: center;
+            margin: 100px auto;
+            padding: 70px 60px 60px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.06) 0%, rgba(165, 28, 48, 0.06) 100%);
+            border-radius: 24px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            backdrop-filter: blur(25px);
+            line-height: 1.7;
+            max-width: 900px;
+            font-weight: 300;
+            font-family: 'Helvetica Neue', sans-serif;
+            position: relative;
+        }
+
+        .quote-block::before {
+            content: '"';
+            position: absolute;
+            top: 8px;
+            left: 36px;
+            font-size: 6rem;
+            font-style: normal;
+            font-family: 'Georgia', serif;
+            color: rgba(212, 175, 55, 0.35);
+            line-height: 1;
+        }
+        
+        /* Refined Content Blocks */
+        .content-block {
+            margin: 60px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        .content-block p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        /* Swiss Precision Insights */
+        .insight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 80px 0;
+        }
+        
+        .insight-card {
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(212, 175, 55, 0.03) 100%);
+            border-radius: 20px;
+            border-left: 3px solid #d4af37;
+            backdrop-filter: blur(15px);
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+        
+        .insight-card:hover {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(212, 175, 55, 0.06) 100%);
+            transform: translateY(-6px);
+        }
+        
+        .insight-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #d4af37;
+            font-weight: 300;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        
+        .insight-content {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        /* Swiss Heritage Footer */
+        .footer {
+            margin-top: 150px;
+            padding: 60px 50px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.04) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(165, 28, 48, 0.04) 100%);
+            border-radius: 28px;
+            text-align: center;
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        
+        .footer-main {
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+        }
+        
+        .footer-description {
+            font-size: 1rem;
+            margin-bottom: 25px;
+            opacity: 0.8;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+        }
+        
+        .footer-creators {
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+            opacity: 0.7;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+        }
+        
+        .footer-creators a {
+            color: #d4af37;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 400;
+        }
+        
+        .footer-creators a:hover {
+            color: #a51c30;
+            text-decoration: underline;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            transition: all 0.4s ease;
+            font-size: 0.9rem;
+            font-weight: 400;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            background: rgba(212, 175, 55, 0.05);
+        }
+        
+        .footer-link:hover {
+            color: #d4af37;
+            background: rgba(212, 175, 55, 0.12);
+            border-color: rgba(212, 175, 55, 0.4);
+            text-decoration: none;
+            transform: translateY(-3px);
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .container { padding: 20px 16px; }
+            .hero { padding: 80px 0 60px; }
+            .hero-nav { gap: 16px; margin: 40px 0 30px; }
+            .hero-nav-separator { display: none; }
+            .section { margin: 80px 0; }
+            .section-subtitle { font-size: 1.05rem; padding: 16px 20px; }
+            .comparison-grid { grid-template-columns: 1fr; gap: 40px; }
+            .comparison-card, .era-card, .speech-section { padding: 30px; }
+            .speech-section { margin: 80px 0; padding: 50px 30px; }
+            .article-links { flex-direction: column; align-items: center; }
+            .cta-button { width: 100%; justify-content: center; }
+            .quote-block { padding: 40px 30px; font-size: 1.2rem; }
+            .footer { padding: 40px 25px; margin-top: 100px; }
+            .footer-links { gap: 20px; flex-direction: column; align-items: center; }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-grid { grid-template-columns: 1fr; gap: 30px; }
+            .records-grid { grid-template-columns: 1fr; gap: 30px; }
+            .insight-grid { grid-template-columns: 1fr; gap: 30px; }
+            .hero-nav { flex-direction: column; gap: 12px; }
+        }
+        
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * { 
+                transition: none !important; 
+                animation: none !important; 
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            body { background: white; color: black; }
+            .hero-nav { display: none; }
+            .stat-card, .comparison-card, .era-card { border: 1px solid #ddd; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="hero" id="hero">
+            <h1 class="hero-title">Roger Federer</h1>
+            <p class="hero-subtitle">The Disruptor Who Transcended the Game</p>
+            
+            <!-- Elegant Text Navigation -->
+            <nav class="hero-nav">
+                <a href="#stats" class="hero-nav-link">Statistics</a>
+                <span class="hero-nav-separator">·</span>
+                <a href="#parallel" class="hero-nav-link">Bitcoin Parallel</a>
+                <span class="hero-nav-separator">·</span>
+                <a href="#speech" class="hero-nav-link">Dartmouth Speech</a>
+                <span class="hero-nav-separator">·</span>
+                <a href="#dominance" class="hero-nav-link">Dominance Era</a>
+                <span class="hero-nav-separator">·</span>
+                <a href="#disruptor" class="hero-nav-link">Disruptor</a>
+                <span class="hero-nav-separator">·</span>
+                <a href="#records" class="hero-nav-link">Records</a>
+                <span class="hero-nav-separator">·</span>
+                <a href="#philosophy" class="hero-nav-link">Philosophy</a>
+                <span class="hero-nav-separator">·</span>
+                <a href="#legacy" class="hero-nav-link">Legacy</a>
+            </nav>
+        </header>
+        
+        <section class="stats-grid" id="stats" role="region" aria-label="Key Statistics">
+            <div class="stat-card">
+                <span class="stat-number">310</span>
+                <span class="stat-label">Weeks at #1</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">237</span>
+                <span class="stat-label">Consecutive Weeks</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">20</span>
+                <span class="stat-label">Grand Slams</span>
+            </div>
+        </section>
+        
+        <section class="section" id="parallel">
+            <div class="section-header">
+                <h2 class="section-title">The Pioneers: The Bitcoin Parallel</h2>
+                <p class="section-subtitle">Both broke barriers that others couldn't crack, creating entirely new paradigms</p>
+            </div>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">₿ Bitcoin</h3>
+                    <ul class="comparison-list">
+                        <li>First truly decentralized currency</li>
+                        <li>Solved double-spend & Byzantine problems no one could crack</li>
+                        <li>Created entirely new paradigm</li>
+                        <li>Enabled the entire cryptocurrency ecosystem</li>
+                        <li>Changed how we think about money forever</li>
+                        <li>Thousands of cryptocurrencies followed its breakthrough</li>
+                    </ul>
+                </div>
+                <div class="comparison-card federer">
+                    <h3 class="comparison-title">🎾 Federer</h3>
+                    <ul class="comparison-list">
+                        <li>First to dominate all surfaces consistently</li>
+                        <li>Years of omni-surface mastery no one achieved before</li>
+                        <li>Created entirely new playing style</li>
+                        <li>One-handed backhand poetry in motion</li>
+                        <li>Changed what tennis could be</li>
+                        <li>Elegance became the new standard of dominance</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="speech-section" id="speech">
+            <div class="speech-intro">
+                <h3>The Masterful Commencement Speech</h3>
+                <p>In June 2024, Federer delivered what many consider one of the greatest commencement speeches of all time at Dartmouth College. His message about winning only 54% of points struck a global chord, going viral and reaching millions worldwide.</p>
+            </div>
+            
+            <div class="speech-highlights">
+                <div class="highlight-card">
+                    <h4 class="highlight-title">"Only 54 Percent"</h4>
+                    <div class="highlight-content">
+                        <p>The most dominant tennis player of his generation revealed he won just 54% of his points across his entire career. The profound lesson? Don't dwell on losses—commit fully to the next opportunity.</p>
+                        <em>"When you lose every second point, on average, you learn not to dwell on every shot. This mindset frees you to fully commit to the next point with intensity, clarity and focus."</em>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <h4 class="highlight-title">Three Tennis Lessons for Life</h4>
+                    <div class="highlight-content">
+                        <p><strong>1. Effortless is a myth</strong> — "It's not about having a gift. It's about having grit."</p>
+                        <p><strong>2. It's only a point</strong> — "Negative energy is wasted energy. You want to become a master at overcoming hard moments."</p>
+                        <p><strong>3. Life is bigger than the court</strong> — "I knew that tennis could show me the world. But tennis could never be the world."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="article-links">
+                <a href="https://www.youtube.com/watch?v=pqWUuYTcG-o" target="_blank" rel="noopener" class="cta-button">
+                    ▶ Watch the Speech (Dartmouth)
+                </a>
+                <a href="https://home.dartmouth.edu/news/2024/06/2024-commencement-address-roger-federer" target="_blank" rel="noopener" class="cta-button">
+                    📄 Full Transcript (Dartmouth)
+                </a>
+                <a href="https://ipfs.io/ipfs/bafkreiepidacn33vcaftpzxb6tdw6pi52ju5gu62omhhdvzsf5lflx7mia" target="_blank" rel="noopener" class="cta-button archive">
+                    🌐 Permanent IPFS Archive
+                </a>
+            </div>
+        </section>
+        
+        <section class="section" id="dominance">
+            <div class="section-header">
+                <h2 class="section-title">The Era of Absolute Dominance</h2>
+            </div>
+            
+            <div class="era-timeline">
+                <div class="era-card">
+                    <h4 class="era-title">The Five-Year Reign (2004-2008)</h4>
+                    <p class="era-description">237 consecutive weeks at #1. Reached 18 of 19 Grand Slam finals. Won 12 of them. No one had ever dominated like this. No one has since.</p>
+                </div>
+                
+                <div class="era-card">
+                    <h4 class="era-title">The Unprecedented Streak (2004-2007)</h4>
+                    <p class="era-description">10 consecutive Grand Slam finals. Won 8 of them. 36 consecutive Grand Slam quarterfinals. A level of consistency that redefined "peak performance"</p>
+                </div>
+                
+                <div class="era-card">
+                    <h4 class="era-title">The Statistical Anomaly (2003-2010)</h4>
+                    <p class="era-description">23 consecutive Grand Slam semifinals. 65 straight wins on grass. 81% career win rate. Numbers that look like glitches in the matrix</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="disruptor">
+            <div class="section-header">
+                <h2 class="section-title">What Makes a True Disruptor?</h2>
+                <p class="section-subtitle">Understanding the elements that create paradigm shifts</p>
+            </div>
+            
+            <div class="insight-grid">
+                <div class="insight-card">
+                    <h4 class="insight-title">About Being First to Solve</h4>
+                    <p class="insight-content">Bitcoin: first to crack decentralized consensus. Federer: first to master all surfaces across multiple years with unmatched adaptability and consistency.</p>
+                </div>
+                
+                <div class="insight-card">
+                    <h4 class="insight-title">Not About Final Count</h4>
+                    <p class="insight-content">Others may eventually surpass in volume—more cryptocurrencies, more slams. But the breakthrough came first. The paradigm shift originated here.</p>
+                </div>
+                
+                <div class="insight-card">
+                    <h4 class="insight-title">About Changing Everything</h4>
+                    <p class="insight-content">Bitcoin created an entire ecosystem. Federer transcended tennis, becoming the greatest ambassador any sport could dream of. Both opened doors to new dimensions.</p>
+                </div>
+                
+                <div class="insight-card">
+                    <h4 class="insight-title">The Paradigm Shift</h4>
+                    <p class="insight-content">They didn't just play the game better. They changed what the game could be. That's not improvement—that's disruption.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="records">
+            <div class="section-header">
+                <h2 class="section-title">The Records That Define Greatness</h2>
+                <p class="section-subtitle">Some numbers transcend statistics and become symbols of an era</p>
+            </div>
+            
+            <div class="records-grid">
+                <div class="record-card">
+                    <span class="record-number">310</span>
+                    <p class="record-description">Total weeks at #1</p>
+                    <p class="record-note">Eventually surpassed by Djokovic, but held for over a decade</p>
+                </div>
+                <div class="record-card">
+                    <span class="record-number">237</span>
+                    <p class="record-description">Consecutive weeks at #1</p>
+                    <p class="record-note">May never be broken. Djokovic's best: 122</p>
+                </div>
+                <div class="record-card">
+                    <span class="record-number">23</span>
+                    <p class="record-description">Consecutive Slam semifinals</p>
+                    <p class="record-note">Nearly 6 years without missing a semifinal</p>
+                </div>
+                <div class="record-card">
+                    <span class="record-number">36</span>
+                    <p class="record-description">Consecutive Slam quarterfinals</p>
+                    <p class="record-note">9 years of guaranteed top 8</p>
+                </div>
+                <div class="record-card">
+                    <span class="record-number">5</span>
+                    <p class="record-description">Consecutive Wimbledon titles</p>
+                    <p class="record-note">Tied with Björn Borg</p>
+                </div>
+                <div class="record-card">
+                    <span class="record-number">5</span>
+                    <p class="record-description">Consecutive US Open titles</p>
+                    <p class="record-note">Open era record</p>
+                </div>
+            </div>
+        </section>
+        
+        <blockquote class="quote-block">
+            "Bitcoin showed us that money could be permissionless. Federer showed us that dominance could be effortless."
+        </blockquote>
+        
+        <section class="section" id="philosophy">
+            <div class="section-header">
+                <h2 class="section-title">The Philosophy of Disruption</h2>
+                <p class="section-subtitle">How individual excellence creates movements that transcend their origins</p>
+            </div>
+            
+            <div class="content-block">
+                <p>When Satoshi Nakamoto released Bitcoin in 2009, he didn't just create a currency. He created a movement. A new way of thinking about trust, value, and decentralization.</p>
+                
+                <p>When Roger Federer dominated tennis from 2004-2008, he didn't just win tournaments. He created a movement. A new way of thinking about athleticism, artistry, and excellence.</p>
+                
+                <p>Both became symbols. Both transcended their fields. Both inspired generations to imagine something different.</p>
+                
+                <p>That's not about who has more at the end. That's about who changed the game forever.</p>
+            </div>
+        </section>
+        
+        <section class="section" id="legacy">
+            <div class="section-header">
+                <h2 class="section-title">The Legacy</h2>
+                <p class="section-subtitle">What endures when the games are finished and the markets have moved</p>
+            </div>
+            
+            <div class="content-block">
+                <p>Djokovic may finish with more Grand Slams. Just as Ethereum may process more transactions than Bitcoin.</p>
+                
+                <p>But ask anyone: Who revolutionized tennis? Who made it beautiful? Who created an era so dominant it became the standard all others are measured against?</p>
+                
+                <p>Ask anyone: What sparked the crypto revolution? What made decentralization a movement? What created the standard all others are measured against?</p>
+                
+                <p><strong>The answer to both is clear. Disruption isn't about being the final victor. It's about being the catalyst that changed everything.</strong></p>
+            </div>
+        </section>
+        
+        <!-- Swiss Heritage Footer -->
+        <footer class="footer">
+            <div class="footer-main">Hosted on IPFS | Accessible via rogerfederer.eth</div>
+            <div class="footer-description">Decentralized memory of the greatest disruptor tennis has ever seen</div>
+            <div class="footer-creators">
+                Built by <a href="https://10102.io" target="_blank" rel="noopener">10102</a> &middot; permanence and self-custody on Ethereum
+            </div>
+            <div class="footer-links">
+                <a href="https://en.wikipedia.org/wiki/Roger_Federer" target="_blank" class="footer-link">Wikipedia</a>
+                <a href="https://www.atptour.com/en/players/roger-federer/f324/overview" target="_blank" class="footer-link">ATP Tour</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
